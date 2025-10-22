@@ -5,35 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./Index.css">
-    <script src="./app.js" defer></script>
 </head>
+<style>
+    button {
+        padding: 10px 40px;
+    }
+</style>
 
 <body>
-    <h1>TEST MARKET PAGE</h1>
+    <h1>Vintage Test</h1>
+    <!-- <button id="send">POST</button> -->
 
-    <div id="status" class="status muted"></div>
-    <form id="product-form" autocomplete="off">
-        <label>
-            <p>Name *</p>
-            <input id="name" name="name" type="text" placeholder="e.g. Coke" required />
-        </label>
-        <label>
-            <p>Category</p>
-            <input id="category" name="category" type="text" placeholder="e.g. beverage" />
-        </label>
-        <label>
-            <p>Price * (>= 0)</p>
-            <input id="price" name="price" type="number" step="0.01" min="0" required />
-        </label>
-        <label>
-            <p>Quantity * (integer, >= 0)</p>
-            <input id="quantity" name="quantity" type="number" step="1" min="0" required />
-        </label>
-
-        <button type="submit" id="submit-btn">Save</button>
+    <form id="productForm">
+        <p><input id="name" type="text" placeholder="name" required></p>
+        <p><input id="price" type="number" placeholder="price" step="0.01" required></p>
+        <p><input id="stock" type="number" placeholder="stock" value="0" min="0" required></p>
+        <p><input id="category" type="text" placeholder="category"></p>
+        <p><input id="image" type="url" placeholder="image URL"></p>
+        <p><textarea id="description" placeholder="description"></textarea></p>
+        <button type="submit">Add</button>
     </form>
 
+
+    <div id="products"></div>
+
+    <script src="./index.js" defer></script>
 </body>
 
 </html>
